@@ -1,17 +1,26 @@
+var popupWindow;
+
 function showPopup(id) {
 	var data = itemsData[id];
 
 	if (data) {
 		var popupTemplate = $.template(null, popupView);
 
-		$.tmpl(popupTemplate, data).appendTo($('body'));
+		popupWindow = $.tmpl(popupTemplate, data).appendTo($('body'));
+		bindPopup();
 	}
 }
 
-function bindPopup(popup) {
-	$('.b-icon--close', popup).click(function() {
-		popup.hide();
+function bindPopup() {
+	$('.b-icon--close', popupWindow).click(function() {
+		popupWindow.hide();
 	});
+}
+
+function removePopup() {
+	if (popupWindow) {
+		popupWindow.remove();
+	}
 }
 
 $(document).ready(function() {
@@ -19,6 +28,7 @@ $(document).ready(function() {
 		var itemData = this.onclick();
 
 		if (itemData && itemData.item_id) {
+			removePopup();
 			showPopup(itemData.item_id);
 		}
 	});
