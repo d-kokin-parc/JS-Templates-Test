@@ -25,10 +25,28 @@
 
 .b-popup_inner {
 	line-height: 1.4;
-	padding: 16px;
+	padding: 30px;
 }
 
 .b-popup h4,
 .b-popup p {
 	padding-bottom: 10px;
 }
+
+.b-popup_tags {
+	overflow: hidden;
+}
+
+.b-popup_tags li {
+	background: #cce3f2;
+	float: left;
+	font-size: .8em;
+	font-style: italic;
+	margin: 0 6px 6px 0;
+	padding: 4px 8px;
+}
+	.b-popup_tags li:hover {
+		background: #66aad7;
+		color: #fff;
+		cursor: pointer;
+	}

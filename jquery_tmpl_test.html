@@ -45,8 +45,10 @@
 					'<div class="b-popup_inner">' +
 						'<p>Адрес статьи: <a href="${url}" target="_blank">${url}</a></p>' +
 						'<h4>Метки</h4>' +
-						'<ul>' +
-							'<li>${tags}</li>' +
+						'<ul class="b-popup_tags">' +
+							'{{each tags}}' +
+							'<li>${$value}</li>' +
+							'{{/each}}' +
 						'</ul>' +
 					'</div>' +
 				'</div>';
