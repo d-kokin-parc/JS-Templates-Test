@@ -40,19 +40,24 @@
 
 		<!-- Шаблон для рендеринга -->
 		<script type="text/javascript">
+			// Шаблон для собственно попапа
 			var popupView = '' +
 				'<div class="b-popup">' +
 					'<i class="b-icon b-icon--close"></i>' +
 					'<div class="b-popup_inner">' +
 						'<p>Адрес статьи: <a href="${url}" target="_blank">${url}</a></p>' +
 						'<h4>Метки</h4>' +
-						'<ul class="b-popup_tags">' +
-							'{{each tags}}' +
-							'<li>${$value}</li>' +
-							'{{/each}}' +
-						'</ul>' +
+						'{{tmpl tagsView}}'
 					'</div>' +
 				'</div>';
+
+			// Шаблон для списка тэгов
+			var tagsView = '' +
+				'<ul class="b-popup_tags">' +
+					'{{each tags}}' +
+					'<li>${$value}</li>' +
+					'{{/each}}' +
+				'</ul>';
 		</script>
 
 		<!-- Статический контент -->
