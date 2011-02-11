@@ -44,6 +44,7 @@
 	font-style: italic;
 	margin: 0 6px 6px 0;
 	padding: 4px 8px;
+	white-space: nowrap;
 }
 	.b-popup_tags li:hover {
 		background: #66aad7;
