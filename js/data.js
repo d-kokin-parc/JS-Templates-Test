@@ -1,4 +1,4 @@
-var data = [
+var itemsData = {
   1: {
     url: 'http://www.membrana.ru/particle/15709',
     tags: ['география', 'архитектура', 'полный бред', 'бугогашечки']
@@ -19,4 +19,4 @@ var data = [
     url: 'http://www.membrana.ru/particle/15705',
     tags: ['маленькие засранцы', 'мелкота', 'ололо', 'как страншно жить', 'биология']
   }
-];
+};
