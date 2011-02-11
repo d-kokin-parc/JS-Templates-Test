@@ -18,6 +18,11 @@ body {
     border-top: 1px #ccc solid;
   }
 
+  .b-feed li:hover {
+    background: #c7ecfa;
+    cursor: pointer;
+  }
+
 .b-feed h4 {
   font-size: 1.2em;
   padding-bottom: 6px;
