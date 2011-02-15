@@ -4,7 +4,7 @@ function showPopup(id) {
 	var data = itemsData[id];
 
 	if (data) {
-		var popupTemplate = $.template(null, popupView);
+		var popupTemplate = $.template('popupTemplate', popupView);
 
 		popupWindow = $.tmpl(popupTemplate, data).appendTo($('body'));
 		bindPopup();
